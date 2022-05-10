@@ -1,0 +1,393 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("peakpx.jpg");
+    
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    background-color: rgb(159, 159, 159);
+    border-radius: 5px;
+    box-shadow: 0 7px 15px 10px rgb(8, 8, 8);
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to top,  #b7b7b7, #FFe5b4);
+    clip-path: circle(400px at 50% -48.5%);
+}
+
+.header {
+    position: relative;
+    height: 265px;
+}
+
+.share_all {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    opacity: .8;
+    transition: .3s;
+    z-index: 2;
+    text-decoration: none;
+}
+
+.share_all:hover {
+    opacity: 1;
+}
+
+.hamburger-menu {
+    position: absolute;
+    width: 21px;
+    height: 16px;
+    top: 1.4rem;
+    left: 1.9rem;
+    z-index: 3;
+    cursor: pointer;
+    transition: .3s;
+    opacity: .8;
+}
+
+.hamburger-menu:hover {
+    opacity: 1;
+}
+
+.hamburger-menu .center {
+    position: absolute;
+    height: 3px;
+    width: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(255, 75, 75);
+    border-radius: 1px;
+}
+
+.hamburger-menu:before,
+.hamburger-menu:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgb(0, 0, 0);
+}
+
+.hamburger-menu:before {
+    top: 0;
+}
+
+.hamburger-menu:after {
+    bottom: 0;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .image {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: url('1646222157430 (1).jpg') no-repeat center / cover;
+    border: 4px solid #000000;
+    margin-bottom: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image .hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(116, 116, 116, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(20, 18, 18);
+    transition: .5s;
+    opacity: 0;
+}
+
+.image:hover .hover {
+    opacity: 1;
+}
+
+.hover.active {
+    opacity: 1;
+}
+
+.name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    line-height: 1;
+    margin: 5px 0;
+}
+
+.sub-name {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.2rem;
+    opacity: .8;
+    color: rgb(0, 0, 0);
+}
+
+.content {
+    display: flex;
+    padding: 1.7rem 2.5rem 2.6rem 2.5rem;
+}
+.title {
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0 0 5px 0;
+    margin-bottom: .19rem;
+    display: inline-block;
+}
+
+.title:after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 99%;
+    background-color: rgb(48, 48, 48);
+    bottom: 0;
+    left: 0;
+}
+
+.text {
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.icons-container {
+    padding: 1rem 0;
+}
+
+.icon {
+    color:#000000;
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin-right: 8px;
+    transition: .3s;
+}
+
+.icon:hover {
+    color: #ff0b0b;
+}
+
+.buttons-wrap {
+    display: flex;
+    margin-top: 5px;
+}
+
+.follow-wrap,
+.share-wrap {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.follow-wrap:hover,
+.share-wrap:hover {
+    flex: 5;
+}
+
+.follow {
+    padding: 9.6px 0;
+    width: 100%;
+    background: linear-gradient(to right, #000000 0%, #000000 140%);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    font-size: .7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 18.1px;
+    margin-right: 3px;
+}
+
+.share {
+    padding: 7.6px 0;
+    width: 100%;
+    border: 2.5px solid #000000;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: .7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 3px;
+    border-radius: 18.1px;
+    background-color: #000000;
+}
+
+
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.close:hover {
+    opacity: .5;
+}
+
+.close:before,
+.close:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 1.5px;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+}
+
+.close:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close:after {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+@media (max-width: 410px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .right {
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+    }
+}
+
+@media (max-width: 370px) {
+    .header {
+        height: 230px;
+    }
+
+    .card:before {
+        clip-path: circle(400px at 50% -74.5%);
+        height: 230px;
+    }
+
+    .hamburger-menu {
+        width: 16px;
+        height: 12px;
+        top: 1.1rem;
+        left: 1.5rem;
+    }
+
+    .mail {
+        font-size: 1.1rem;
+        top: .75rem;
+        right: 1.5rem;
+    }
+
+    .main .image {
+        width: 90px;
+        height: 90px;
+        border-width: 3px;
+    }
+
+    .name,
+    .sub-name {
+        font-size: 1rem;
+    }
+
+    .content {
+        padding: 1.2rem 1.8rem 1.8rem 1.8rem;
+    }
+
+    .number {
+        font-size: 1.8rem;
+    }
+
+    .number-title {
+        font-size: .4rem;
+    }
+
+    .right {
+        padding-top: 1rem;
+    }
+
+    .title {
+        font-size: .9rem;
+        margin-bottom: .5rem;
+    }
+
+    .text {
+        font-size: .8rem;
+    }
+
+    .icons-container {
+        padding: .5rem 0;
+    }
+
+    .icon {
+        font-size: 1.1rem;
+    }
+
+    .follow {
+        padding: 7.6px 0;
+        border-radius: 14.6px;
+        font-size: .6rem;
+    }
+
+    .share {
+        padding: 5.6px 0;
+        border-radius: 14.6px;
+        font-size: .6rem;
+    }
+}
